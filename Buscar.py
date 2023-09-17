@@ -9,6 +9,8 @@ def buscar():
     if archivo:
         df = pd.read_csv(archivo)
         print(df)
+    columnas=df.columns
+    print(columnas)
     
 root = tk.Tk()
 root.title('Buscador')
@@ -22,4 +24,3 @@ label1.pack()
 
 
 root.mainloop()
-
