@@ -11,6 +11,7 @@ def buscar():
         print(df)
     columnas=df.columns
     print(columnas)
+    print(df[['Abs (Corr)1','Abs (Corr)2','Abs (Corr)3']])
     
 root = tk.Tk()
 root.title('Buscador')
