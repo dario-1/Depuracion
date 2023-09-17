@@ -1,5 +1,6 @@
 import tkinter as tk
 import pandas as pd
+from tkinter import ttk
 from tkinter import filedialog
 import os
 
@@ -9,14 +10,14 @@ def buscar():
         if archivo:
             label1.config(text=archivo)
             df = pd.read_csv(archivo)
-            print("Contenido del archivo CSV:")
-            print(df)
+            #print("Contenido del archivo CSV:")
+            #print(df)
             columnas = df.columns
-            print("Columnas del DataFrame:")
-            print(columnas)
+            #print("Columnas del DataFrame:")
+            #print(columnas)
             tabla = df[['Abs (Corr)1', 'Abs (Corr)2', 'Abs (Corr)3']]
-            print("Subconjunto del DataFrame:")
-            print(tabla)
+            #print("Subconjunto del DataFrame:")
+            #print(tabla)
             
             # Obtener el nombre del archivo sin la extension .csv
             nombre_archivo = os.path.splitext(os.path.basename(archivo))[0]
@@ -39,7 +40,7 @@ def buscar():
         label1.config(text=f"Error: {str(e)}")
 
 root = tk.Tk()
-root.title('Buscador de CSV')
+root.title('Depurador de archivos')
 
 button1 = tk.Button(root, text='Buscar', command=buscar)
 button1.pack()
